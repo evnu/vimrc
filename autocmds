@@ -1,0 +1,4 @@
+" Some autocommands
+
+" We want: <localleader>K in notes should open vim help for word under cursor
+" au FileType *.notes nnoremap <buffer> <localleader>K :help <c-r><c-w><cr>

@@ -1,4 +1,10 @@
 vimrc
 =====
 
-My vim dotfiles
+My vim dotfiles. That's it.
+
+Requirements
+============
+
+* pathogen
+* vundle
