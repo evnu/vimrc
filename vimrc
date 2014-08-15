@@ -21,9 +21,9 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 "========= Keybindings
-source /home/evnu/configs/vim/keybindings
+source ~/.vim/keybindings
 
-source /home/evnu/configs/vim/autocmds
+source ~/.vim/autocmds
 
 "========= Other configurations
 "enable syntax highlighting
@@ -33,7 +33,7 @@ set nu!
 set noswapfile
 
 set undofile
-set undodir=/home/evnu/configs/vim/undodir
+set undodir=~/.vim/undodir
 
 " Ignore files whose content should be kept private
 augroup ignore_undofile
