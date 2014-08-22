@@ -1,4 +1,13 @@
+" vim: set ft=vim:
+
 " Some autocommands
 
 " We want: <localleader>K in notes should open vim help for word under cursor
 " au FileType *.notes nnoremap <buffer> <localleader>K :help <c-r><c-w><cr>
+
+augroup Erlang
+    au!
+    au FileType erlang setlocal comments=:%%%,:%%,:%
+    " wrap text and code, add comment leader after newline and o
+    au FileType erlang setlocal formatoptions=tcqor
+augroup END
