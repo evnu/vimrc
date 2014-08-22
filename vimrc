@@ -1,52 +1,34 @@
-"=========  Required Options
+"{{{ Initialization
 " set options required for bundled packages
 set nocompatible
 filetype plugin indent on
 
-"========= Plugins
-" configure plugins first, in case that some settings depend on a loaded plugin
-
-" pathogen
+" pathogen and vundle
 call pathogen#infect()
 call pathogen#helptags()
 
 source ~/.vim/vundle
 
-set encoding=utf-8
-set laststatus=2
+"}}}
 
-" Enable neocomplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-"========= Keybindings
+"{{{ Source files
 source ~/.vim/keybindings
+"}}}
 
-source ~/.vim/autocmds
-
-"========= Other configurations
-"enable syntax highlighting
-syntax on
-set nu!
+"{{{Main options
+syntax on "enable syntax highlighting
+set relativenumber
 
 set noswapfile
+
+set encoding=utf-8
+set laststatus=2
 
 set undofile
 set undodir=~/.vim/undodir
 
-" Ignore files whose content should be kept private
-augroup ignore_undofile
-    au!
-    au BufReadPre,BufFilePre */private/keys/* setlocal noundofile
-augroup end
-
 " relative line numbering
 set relativenumber
-
-" for R-vim plugin
-let vimrplugin_screenplugin=0
-let vimrplugin_tmux=0
 
 "avoid "Hit ENTER to continue". See:
 "http://vim.wikia.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
@@ -60,11 +42,11 @@ set softtabstop=4
 "set wildmenu
 set wildmenu
 
-"nosol - jump to specific character in a line
+"nosol - jump to first non-blank character in a line
 set nosol
 
-"short messages
-set shm=at
+"short messages - less hit-enter prompts
+set shortmess=at
 
 "max text width
 set tw=90
@@ -82,9 +64,9 @@ colorscheme molokai
 " http://ksjoberg.com/vim-esckeys.html
 " set noesckeys
 set timeout timeoutlen=1000 ttimeoutlen=100
+"}}}
 
-let c_comment_strings=1 "syntax highlighting in comments
-
+"{{{Style
 set mouse=a
 if has("gui_running")
         set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
@@ -96,16 +78,9 @@ if has("gui_running")
 else
 	highlight Pmenu ctermbg=238 ctermfg=white gui=bold
 endif
+"}}}
 
-"remember position
-if has("autocmd")
-    augroup remember_pos
-        au!
-        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-    augroup END
-endif
-
-"= THE BEAUTY: Configure the tabline to remove file extensions
+"{{{Tabline
 set tabline=%!TabLine()
 
 " adapted from help tabpage
@@ -139,3 +114,39 @@ function! TabLabel(n)
     let winnr = tabpagewinnr(a:n)
     return fnamemodify(bufname(buflist[winnr - 1]), ":r")
 endfunction
+"}}}
+
+"{{{Autocommands
+
+    "{{{Cursor positioning
+    augroup remember_pos
+        au!
+        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    augroup END
+
+    "}}}
+
+    "{{{ Vimscript file settings
+    augroup filetype_vim
+        autocmd!
+        autocmd FileType vim setlocal foldmethod=marker
+    augroup END
+    "}}}
+
+    "{{{ Erlang file settings
+    augroup filetype_erlang
+        au!
+        au FileType erlang setlocal comments=:%%%,:%%,:%
+        " wrap text and code, add comment leader after newline and o
+        au FileType erlang setlocal formatoptions=tcqor
+    augroup END
+    " }}}
+
+    "{{{ Manage undo files
+    " Ignore files whose content should be kept private
+    augroup undofile
+        au!
+        au BufReadPre,BufFilePre */private/keys/* setlocal noundofile
+    augroup end
+    "}}}
+"}}}
