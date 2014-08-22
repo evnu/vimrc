@@ -118,35 +118,34 @@ endfunction
 
 "{{{Autocommands
 
-    "{{{Cursor positioning
-    augroup remember_pos
-        au!
-        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-    augroup END
+"{{{Cursor positioning
+augroup remember_pos
+    au!
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+augroup END
+"}}}
 
-    "}}}
+"{{{ Vimscript file settings
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+"}}}
 
-    "{{{ Vimscript file settings
-    augroup filetype_vim
-        autocmd!
-        autocmd FileType vim setlocal foldmethod=marker
-    augroup END
-    "}}}
+"{{{ Erlang file settings
+augroup filetype_erlang
+    au!
+    au FileType erlang setlocal comments=:%%%,:%%,:%
+    " wrap text and code, add comment leader after newline and o
+    au FileType erlang setlocal formatoptions=tcqor
+augroup END
+" }}}
 
-    "{{{ Erlang file settings
-    augroup filetype_erlang
-        au!
-        au FileType erlang setlocal comments=:%%%,:%%,:%
-        " wrap text and code, add comment leader after newline and o
-        au FileType erlang setlocal formatoptions=tcqor
-    augroup END
-    " }}}
-
-    "{{{ Manage undo files
-    " Ignore files whose content should be kept private
-    augroup undofile
-        au!
-        au BufReadPre,BufFilePre */private/keys/* setlocal noundofile
-    augroup end
-    "}}}
+"{{{ Manage undo files
+" Ignore files whose content should be kept private
+augroup undofile
+    au!
+    au BufReadPre,BufFilePre */private/keys/* setlocal noundofile
+augroup end
+"}}}
 "}}}
