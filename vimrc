@@ -17,27 +17,24 @@ source ~/.vim/keybindings
 
 "{{{Main options
 syntax on "enable syntax highlighting
-set relativenumber
-
-set noswapfile
+set relativenumber " relative line numbering
 
 set encoding=utf-8
 set laststatus=2
 
-set undofile
+set noswapfile " do not use swapfiles..
+set undofile " but persistent undo is nice.. (see autocommands for ignored paths!)
 set undodir=~/.vim/undodir
 
-" relative line numbering
-set relativenumber
-
-"avoid "Hit ENTER to continue". See:
-"http://vim.wikia.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
-set cmdheight=1
-
-" configure indent
+"{{{indent, tabwidth, shiftwidth and NO TABS!
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+"max text width
+set tw=90
+set smartindent
+set autoindent " manual says that this should be set when smartindent is set
+"}}}
 
 "set wildmenu
 set wildmenu
@@ -45,24 +42,20 @@ set wildmenu
 "nosol - jump to first non-blank character in a line
 set nosol
 
+"{{{Hit enter less often
 "short messages - less hit-enter prompts
 set shortmess=at
-
-"max text width
-set tw=90
-
-set smartindent
-set autoindent " manual says that this should be set when smartindent is set
-
-" change to the directory of the file "
-set autochdir
+"avoid "Hit ENTER to continue". See:
+"http://vim.wikia.com/wiki/Avoiding_the_%22Hit_ENTER_to_continue%22_prompts
+set cmdheight=1
+"}}}
 
 " Colorscheme
 colorscheme molokai
 
 " fix slight delay after pressing ESC then O
 " http://ksjoberg.com/vim-esckeys.html
-" set noesckeys
+" See also: `:help noesckeys`
 set timeout timeoutlen=1000 ttimeoutlen=100
 "}}}
 
@@ -129,6 +122,7 @@ augroup END
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType vim setlocal foldlevelstart=0
 augroup END
 "}}}
 
