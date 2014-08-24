@@ -32,7 +32,15 @@ set shiftwidth=4
 set softtabstop=4
 "max text width
 set tw=90
+
+" Note (from :help smartindent):
+" When typing '#' as the first character in a new line, the indent for that line is
+" removed, the '#' is put in the first column.  The indent is restored for the next line.
+" If you don't want this, use this mapping: ":inoremap # X^H#", where ^H is entered with
+" CTRL-V CTRL-H.
 set smartindent
+inoremap # X#
+
 set autoindent " manual says that this should be set when smartindent is set
 "}}}
 
