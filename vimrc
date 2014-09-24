@@ -143,6 +143,13 @@ augroup filetype_erlang
 augroup END
 " }}}
 
+"{{{ mail file settings
+augroup filetype_mail
+    au!
+    au FileType mail setlocal textwidth=0 linebreak
+augroup END
+" }}}
+
 "{{{ Manage undo files
 " Ignore files whose content should be kept private
 augroup undofile
