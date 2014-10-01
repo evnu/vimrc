@@ -17,7 +17,10 @@ source ~/.vim/keybindings
 
 "{{{Main options
 syntax on "enable syntax highlighting
-set relativenumber " relative line numbering
+
+" enable hybrid relativenumber-number
+set relativenumber
+set number
 
 set encoding=utf-8
 set laststatus=2
