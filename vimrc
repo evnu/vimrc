@@ -264,7 +264,13 @@ nnoremap <F6> :GundoToggle<CR>
 nnoremap <F9> :SyntasticToggleMode<CR>
 
 " remove whitespace at the end of a line
-nnoremap <leader>dws :%s/\s\+$//ge<CR>
+" NOTE: uses the register A for storing the previous position.
+function! RemoveTrailingWhitespace()
+    normal! mA
+    %s/\s\+$//ge
+    normal! `A
+endfunction
+nnoremap <leader>dws :call RemoveTrailingWhitespace()<cr>
 
 " neosnippets; see https://github.com/Shougo/neosnippet.vim
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
