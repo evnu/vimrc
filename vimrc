@@ -132,6 +132,8 @@ else
     set mouse=a
     " colors
     set background=dark
+    " try to get molokai colors
+    let g:rehash256 = 1
 endif
 "}}}
 
