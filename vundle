@@ -88,8 +88,6 @@ let g:localvimrc_ask=0
 " prereq for vim-notes
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
-"" Do not smart-quote: deactivates bulletin points as well!
-let g:notes_smart_quotes = 0
 
 " {{{ handling dates
 Plugin 'tpope/vim-speeddating.git'
