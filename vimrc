@@ -120,8 +120,6 @@ endif
 
 "{{{Style
 " Colorscheme
-colorscheme molokai
-
 if has("gui_running")
     set guifont=Terminus\ 12
     " guioptions: autoselect, grey menu items, vim icon, tear-off menu items
@@ -130,6 +128,8 @@ if has("gui_running")
     " set color of popup menu
     highlight Pmenu guibg=black guifg=white gui=bold
     set background=dark
+
+    colorscheme molokai
 else
     highlight Pmenu ctermbg=238 ctermfg=white gui=bold
     " allow using the mouse in a terminal
@@ -138,6 +138,8 @@ else
     set background=dark
     " try to get molokai colors
     let g:rehash256 = 1
+
+    colorscheme advantage
 endif
 "}}}
 
