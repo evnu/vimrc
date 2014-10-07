@@ -8,3 +8,8 @@ Requirements
 
 * pathogen
 * vundle
+
+Installation
+============
+
+Clone the repository to `~/.vim` or symlink the clone. Then run `:PluginInstall`.

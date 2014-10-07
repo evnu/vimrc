@@ -1,18 +1,19 @@
 "{{{ Initialization
-" set options required for bundled packages
-set nocompatible
-filetype plugin indent on
+runtime bundle/vim-pathogen.git/autoload/pathogen.vim
 
 " pathogen and vundle
 call pathogen#infect()
 call pathogen#helptags()
 
-source ~/.vim/vundle
+" set options required for bundled packages
+set nocompatible
+filetype plugin indent on
+set syntax=on
 
-"}}}
+filetype off " from vundle readme
+runtime vundle
+filetype on
 
-"{{{ Source files
-source ~/.vim/keybindings
 "}}}
 
 "{{{Main options
@@ -28,6 +29,27 @@ set laststatus=2
 set noswapfile " do not use swapfiles..
 set undofile " but persistent undo is nice.. (see autocommands for ignored paths!)
 set undodir=~/.vim/undodir
+
+set noautochdir
+
+" don't track changes
+set nobackup
+set noswapfile
+
+"{{{ highlight whitespace
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+augroup whitespace
+    au!
+    autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+    autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+    autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+    autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+augroup END
+"}}}
 
 "{{{indent, tabwidth, shiftwidth and NO TABS!
 set expandtab
@@ -53,6 +75,16 @@ set wildmenu
 "nosol - jump to first non-blank character in a line
 set nosol
 
+"{{{ Overlong columns
+
+" mark overlong columns
+set cc=90
+
+" linebreak
+set tw=100
+
+" }}}
+
 "{{{Hit enter less often
 "short messages - less hit-enter prompts
 set shortmess=at
@@ -61,26 +93,45 @@ set shortmess=at
 set cmdheight=1
 "}}}
 
-" Colorscheme
-colorscheme molokai
-
 " fix slight delay after pressing ESC then O
 " http://ksjoberg.com/vim-esckeys.html
 " See also: `:help noesckeys`
 set timeout timeoutlen=1000 ttimeoutlen=100
+
+" {{{ Menu
+set wildmenu
+"" 1st and 2nd tab act differently
+set wildmode=list:longest,full
+" }}}
+
 "}}}
 
+" {{{ Searching Stuff
+" From http://robots.thoughtbot.com/faster-grepping-in-vim
+" Use silver-searcher
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
+endif
+" }}}
+
 "{{{Style
-set mouse=a
+" Colorscheme
+colorscheme molokai
+
 if has("gui_running")
-        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
-        set guioptions-=e
-        set guioptions-=m
-        " disable scrollbar "
-        set guioptions-=L
-        set guioptions-=r
+    set guifont=Terminus\ 12
+    " guioptions: autoselect, grey menu items, vim icon, tear-off menu items
+    set guioptions=agit
+
+    " set color of popup menu
+    highlight Pmenu guibg=black guifg=white gui=bold
+    set background=dark
 else
-	highlight Pmenu ctermbg=238 ctermfg=white gui=bold
+    highlight Pmenu ctermbg=238 ctermfg=white gui=bold
+    " allow using the mouse in a terminal
+    set mouse=a
+    " colors
+    set background=dark
 endif
 "}}}
 
@@ -125,7 +176,10 @@ endfunction
 "{{{Cursor positioning
 augroup remember_pos
     au!
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    au BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g'\"" |
+        \ endif
 augroup END
 "}}}
 
@@ -160,4 +214,58 @@ augroup undofile
     au BufReadPre,BufFilePre */private/keys/* setlocal noundofile
 augroup end
 "}}}
+
+"{{{ Vimperator
+augroup vimperator
+    au!
+    autocmd BufWinEnter vimperator-* call VimperatorSettings()
+augroup END
+function! VimperatorSettings()
+    set wrap
+    set linebreak
+    set nolist  " list disables linebreak
+    set textwidth=0
+    set wrapmargin=0
+endfunction
 "}}}
+
+" {{{ Trac
+augroup trac
+    au!
+    au BufNew,BufRead *trac.* :set ft=tracwiki
+    au BufNew,BufRead *trac.* :set tw=0
+augroup END
+" }}}
+"}}}
+
+" {{{ Keybindings
+
+" ignore Ctrl+C
+nnoremap <C-c> :echom "<C-c> ignored"<cr>
+
+" edit/source vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" edit custom snippets for the current filetype
+" See :help c_CTRL-R for the expression register '='
+nnoremap <leader>se :split <c-r>=g:neosnippet#snippets_directory."/".&ft.".snip"<cr><cr>
+
+" Some simple keymappings
+map <F3> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+
+" for vim undo tree
+nnoremap <F6> :GundoToggle<CR>
+
+" toggle syntastic
+nnoremap <F9> :SyntasticToggleMode<CR>
+
+" remove whitespace at the end of a line
+nnoremap <leader>dws :%s/\s\+$//ge<CR>
+
+" neosnippets; see https://github.com/Shougo/neosnippet.vim
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+" }}}

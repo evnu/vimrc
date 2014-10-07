@@ -1,8 +1,0 @@
-" move a line down
-nnoremap <leader>- ddp
-" move a line up
-nnoremap <leader>_ kddp
-
-" Edit/source vimrc faster
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>

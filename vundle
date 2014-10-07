@@ -9,8 +9,20 @@ Plugin 'gmarik/Vundle.vim'
 
 " }}}
 
+" {{{ Style
+
+" {{{ Statusline
+Plugin 'bling/vim-airline'
+set laststatus=2 " to show airline when opening a file
+" }}}
+
 "{{{ Colorschemes
 Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
+"}}}
+
+" add markers in the quickfix column
+Plugin 'kshenoy/vim-signature'
 "}}}
 
 "{{{ Completion
@@ -19,29 +31,74 @@ Plugin 'Shougo/neocomplete.vim'
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+
+augroup neosnippet
+    au!
+    au FileType neosnippet :set tw=0 nowrap
+augroup END
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 
 Plugin 'kien/ctrlp.vim'
+if executable('ag')
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 "}}}
 
 "{{{ Formatting
 " Tabularize stuff
 Plugin 'godlygeek/tabular'
+
+Plugin 'tpope/vim-surround'
 "}}}
 
 "{{{ Syntax
 " Syntax checks
 Plugin 'scrooloose/syntastic'
+
+" Markdown
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled=1
+
+" Filetype for trac
+Plugin 'tracwiki'
 "}}}
 
+" {{{ Tags
 " Tagbar, setup for <F8>
 Plugin 'majutsushi/tagbar'
 nnoremap <F8> :TagbarToggle<CR>
+" }}}
 
 " Project-specific settings
 Plugin 'embear/vim-localvimrc'
+let g:localvimrc_ask=0
 
 " Note-taking
-Plugin 'xolox/vim-misc' " prereq for vim-notes
+
+" prereq for vim-notes
+Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 "" Do not smart-quote: deactivates bulletin points as well!
 let g:notes_smart_quotes = 0
+
+" {{{ handling dates
+Plugin 'tpope/vim-speeddating.git'
+" }}}
+
+" {{{ REPL
+Plugin 'jpalardy/vim-slime'
+" }}}
+
+" {{{ Erlang
+Plugin 'hcs42/vim-erlang-runtime'
+" }}}
