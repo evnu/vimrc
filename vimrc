@@ -107,6 +107,10 @@ set wildmode=list:longest,full
 "}}}
 
 " {{{ Searching Stuff
+
+set incsearch
+set hlsearch
+
 " From http://robots.thoughtbot.com/faster-grepping-in-vim
 " Use silver-searcher
 if executable('ag')
