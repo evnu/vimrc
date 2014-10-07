@@ -205,7 +205,7 @@ augroup END
 "{{{ mail file settings
 augroup filetype_mail
     au!
-    au FileType mail setlocal textwidth=0 linebreak
+    au FileType mail setlocal textwidth=0 linebreak noundofile
 augroup END
 " }}}
 
