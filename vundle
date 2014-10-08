@@ -25,6 +25,10 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'kshenoy/vim-signature'
 "}}}
 
+" {{{ Navigation
+Plugin 'scrooloose/nerdtree'
+" }}}
+
 "{{{ Completion
 Plugin 'Shougo/neocomplete.vim'
 " Enable neocomplete
@@ -99,4 +103,8 @@ Plugin 'jpalardy/vim-slime'
 
 " {{{ Erlang
 Plugin 'hcs42/vim-erlang-runtime'
+" }}}
+
+" {{{ Working with Undos
+Plugin 'mbbill/undotree'
 " }}}
