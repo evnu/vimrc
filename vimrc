@@ -217,9 +217,9 @@ augroup end
 "{{{ Vimperator
 augroup vimperator
     au!
-    autocmd BufWinEnter vimperator-* call VimperatorSettings()
+    autocmd BufWinEnter vimperator-* call <SID>VimperatorSettings()
 augroup END
-function! VimperatorSettings()
+function! s:VimperatorSettings()
     set wrap
     set linebreak
     set nolist  " list disables linebreak
@@ -266,14 +266,14 @@ nnoremap <F9> :SyntasticToggleMode<CR>
 
 " remove whitespace at the end of a line
 " NOTE: uses the register A for storing the previous position.
-function! RemoveTrailingWhitespace()
+function! s:RemoveTrailingWhitespace()
     let l:save_reg = @a
     normal! ma
     %s/\s\+$//ge
     normal! `a
     let @a = l:save_reg
 endfunction
-nnoremap <leader>dws :call RemoveTrailingWhitespace()<cr>
+nnoremap <leader>dws :call <SID>RemoveTrailingWhitespace()<cr>
 
 " neosnippets; see https://github.com/Shougo/neosnippet.vim
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
