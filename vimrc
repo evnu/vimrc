@@ -239,6 +239,10 @@ augroup END
 
 " {{{ Keybindings
 
+" cnext/cprevious
+nnoremap <leader>cn :cnext<cr>
+nnoremap <leader>cp :cprevious<cr>
+
 " ignore Ctrl+C
 nnoremap <C-c> :echom "<C-c> ignored"<cr>
 
