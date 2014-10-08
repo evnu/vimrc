@@ -243,9 +243,6 @@ augroup END
 nnoremap <leader>cn :cnext<cr>
 nnoremap <leader>cp :cprevious<cr>
 
-" ignore Ctrl+C
-nnoremap <C-c> :echom "<C-c> ignored"<cr>
-
 " edit/source vimrc
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -279,7 +276,16 @@ endfunction
 nnoremap <leader>dws :call RemoveTrailingWhitespace()<cr>
 
 " neosnippets; see https://github.com/Shougo/neosnippet.vim
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+
+
+" {{{ Handling buffers and windows
+
+" Quickly close a window
+nnoremap <leader>c :close<cr>
+
+" }}}
+
 " }}}
