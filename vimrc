@@ -30,8 +30,6 @@ set noswapfile " do not use swapfiles..
 set undofile " but persistent undo is nice.. (see autocommands for ignored paths!)
 set undodir=~/.vim/undodir
 
-set noautochdir
-
 " don't track changes
 set nobackup
 set noswapfile
