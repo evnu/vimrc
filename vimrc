@@ -270,9 +270,11 @@ nnoremap <F9> :SyntasticToggleMode<CR>
 " remove whitespace at the end of a line
 " NOTE: uses the register A for storing the previous position.
 function! RemoveTrailingWhitespace()
-    normal! mA
+    let l:save_reg = @a
+    normal! ma
     %s/\s\+$//ge
-    normal! `A
+    normal! `a
+    let @a = l:save_reg
 endfunction
 nnoremap <leader>dws :call RemoveTrailingWhitespace()<cr>
 
