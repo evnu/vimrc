@@ -250,6 +250,9 @@ nnoremap <C-c> :echom "<C-c> ignored"<cr>
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" source the current file
+nnoremap <leader>sf :source %<cr>
+
 " edit custom snippets for the current filetype
 " See :help c_CTRL-R for the expression register '='
 nnoremap <leader>se :split <c-r>=g:neosnippet#snippets_directory."/".&ft.".snip"<cr><cr>
