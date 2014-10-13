@@ -259,7 +259,7 @@ map <F3> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " for vim undo tree
-nnoremap <F6> :GundoToggle<CR>
+nnoremap <F6> :UndotreeToggle<CR>
 
 " toggle syntastic
 nnoremap <F9> :SyntasticToggleMode<CR>

@@ -12,4 +12,12 @@ Requirements
 Installation
 ============
 
-Clone the repository to `~/.vim` or symlink the clone. Then run `:PluginInstall`.
+* Clone the repository to `~/.vim` or symlink the clone:
+
+    ln -s <path>/vimrc ~/.vim
+
+* Run
+
+    git submodule init
+    git submodule update
+* Then run `:PluginInstall`.
