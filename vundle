@@ -110,3 +110,9 @@ Plugin 'hcs42/vim-erlang-runtime'
 " {{{ Working with Undos
 Plugin 'mbbill/undotree'
 " }}}
+
+"{{{ working with VCSs
+
+Plugin 'jlfwong/vim-mercenary'
+
+"}}}
