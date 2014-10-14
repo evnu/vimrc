@@ -1,5 +1,5 @@
 "{{{ Initialization
-runtime bundle/vim-pathogen.git/autoload/pathogen.vim
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " pathogen and vundle
 call pathogen#infect()

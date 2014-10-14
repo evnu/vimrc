@@ -9,6 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " }}}
 
+Plugin 'tpope/vim-pathogen'
+
 " {{{ Style
 
 " {{{ Statusline
