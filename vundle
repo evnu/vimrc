@@ -85,6 +85,13 @@ Plugin 'tracwiki'
 " Tagbar, setup for <F8>
 Plugin 'majutsushi/tagbar'
 nnoremap <F8> :TagbarToggle<CR>
+" Add make as indicated in https://github.com/majutsushi/tagbar/wiki
+let g:tagbar_type_make = {
+            \ 'kinds':[
+                \ 'm:macros',
+                \ 't:targets'
+            \ ]
+            \}
 " }}}
 
 " Project-specific settings
