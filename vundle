@@ -120,8 +120,12 @@ Plugin 'hcs42/vim-erlang-runtime'
 Plugin 'mbbill/undotree'
 " }}}
 
-"{{{ working with VCSs
+"{{{ Working with VCSs
 
 Plugin 'jlfwong/vim-mercenary'
 
+"}}}
+
+"{{{ Working with Diffs
+Plugin 'AndrewRadev/linediff.vim'
 "}}}
