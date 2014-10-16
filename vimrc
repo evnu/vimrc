@@ -191,11 +191,22 @@ augroup END
 "}}}
 
 "{{{ Erlang file settings
-augroup filetype_erlang
-    au!
+
+function! s:ErlangSettings()
     au FileType erlang setlocal comments=:%%%,:%%,:%
     " wrap text and code, add comment leader after newline and o
     au FileType erlang setlocal formatoptions=tcqor
+endfunction
+
+augroup filetype_erlang
+    au!
+    call <SID>ErlangSettings()
+augroup END
+
+augroup filetype_escript
+    au!
+    au BufRead,BufWrite *.escript setlocal filetype=erlang
+    call <SID>ErlangSettings()
 augroup END
 " }}}
 
