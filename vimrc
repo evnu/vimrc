@@ -250,6 +250,9 @@ augroup END
 
 " {{{ Keybindings
 
+" nohls after searching
+nnoremap <esc><esc> :<c-u>nohlsearch<cr>
+
 " cnext/cprevious
 nnoremap <leader>cn :cnext<cr>
 nnoremap <leader>cp :cprevious<cr>
