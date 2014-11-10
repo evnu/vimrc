@@ -213,7 +213,7 @@ augroup END
 "{{{ mail file settings
 augroup filetype_mail
     au!
-    au FileType mail setlocal textwidth=0 linebreak noundofile
+    au FileType mail setlocal textwidth=90 linebreak noundofile
 augroup END
 " }}}
 
