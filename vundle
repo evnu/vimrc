@@ -126,6 +126,7 @@ Plugin 'mbbill/undotree'
 "{{{ Working with VCSs
 
 Plugin 'jlfwong/vim-mercenary'
+Plugin 'tpope/vim-fugitive'
 
 "}}}
 
