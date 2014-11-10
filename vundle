@@ -104,6 +104,9 @@ let g:localvimrc_ask=0
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 
+" annotate lines with external files
+Plugin 'khorser/vim-qfnotes'
+
 " {{{ handling dates
 Plugin 'tpope/vim-speeddating.git'
 " }}}
@@ -123,6 +126,7 @@ Plugin 'mbbill/undotree'
 "{{{ Working with VCSs
 
 Plugin 'jlfwong/vim-mercenary'
+Plugin 'tpope/vim-fugitive'
 
 "}}}
 

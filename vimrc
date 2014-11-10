@@ -210,6 +210,12 @@ augroup filetype_escript
 augroup END
 " }}}
 
+"{{{ Python file settings
+augroup filetype_python
+    au FileType python setlocal formatoptions=tcqor
+augroup END
+"}}}
+
 "{{{ mail file settings
 augroup filetype_mail
     au!
