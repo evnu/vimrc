@@ -182,6 +182,13 @@ augroup remember_pos
 augroup END
 "}}}
 
+"{{{ Shell file settings
+augroup filetype_sh
+    autocmd!
+    au FileType sh setlocal formatoptions=tcqor
+augroup END
+"}}}
+
 "{{{ Vimscript file settings
 augroup filetype_vim
     autocmd!
