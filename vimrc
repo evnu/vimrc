@@ -207,6 +207,7 @@ endfunction
 
 augroup filetype_erlang
     au!
+    au BufNew,BufRead *.appup setlocal ft=erlang
     call <SID>ErlangSettings()
 augroup END
 
@@ -306,13 +307,5 @@ nnoremap <leader>dws :call <SID>RemoveTrailingWhitespace()<cr>
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
-
-
-" {{{ Handling buffers and windows
-
-" Quickly close a window
-nnoremap <leader>c :close<cr>
-
-" }}}
 
 " }}}
