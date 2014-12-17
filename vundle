@@ -133,3 +133,7 @@ Plugin 'tpope/vim-fugitive'
 "{{{ Working with Diffs
 Plugin 'AndrewRadev/linediff.vim'
 "}}}
+
+" {{{ Drawing
+Plugin 'vim-scripts/DrawIt'
+" }}}
