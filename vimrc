@@ -203,6 +203,7 @@ function! s:ErlangSettings()
     au FileType erlang setlocal comments=:%%%,:%%,:%
     " wrap text and code, add comment leader after newline and o
     au FileType erlang setlocal formatoptions=tcqor
+    au FileType erlang setlocal textwidth=80
 endfunction
 
 augroup filetype_erlang
