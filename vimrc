@@ -296,7 +296,7 @@ nnoremap <F9> :SyntasticToggleMode<CR>
 " Grep for todos and open search results using :lopen
 function! GrepTodos()
     let s:file = expand('%:p')
-    exec "lvimgrep /\\vTODO|XXX|FIXME/ " . s:file
+    silent exec "lvimgrep /\\vTODO|XXX|FIXME/ " . s:file
 endfunction
 
 nnoremap <F4> :call GrepTodos()<cr>
