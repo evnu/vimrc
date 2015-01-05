@@ -293,6 +293,14 @@ nnoremap <F6> :UndotreeToggle<CR>
 " toggle syntastic
 nnoremap <F9> :SyntasticToggleMode<CR>
 
+" Grep for todos and open search results using :lopen
+function! GrepTodos()
+    let s:file = expand('%:p')
+    exec "lvimgrep /\\vTODO|XXX|FIXME/ " . s:file
+endfunction
+
+nnoremap <F4> :call GrepTodos()<cr>
+
 " remove whitespace at the end of a line
 " NOTE: uses the register A for storing the previous position.
 function! s:RemoveTrailingWhitespace()
