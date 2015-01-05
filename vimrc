@@ -296,10 +296,10 @@ nnoremap <F9> :SyntasticToggleMode<CR>
 " Grep for todos and open search results using :lopen
 function! GrepTodos()
     let s:file = expand('%:p')
-    silent exec "lvimgrep /\\vTODO|XXX|FIXME/ " . s:file
+    exec "lvimgrep /\\vTODO|XXX|FIXME/ " . s:file
 endfunction
 
-nnoremap <F4> :call GrepTodos()<cr>
+nnoremap <F4> :silent !call GrepTodos()<cr>
 
 " remove whitespace at the end of a line
 " NOTE: uses the register A for storing the previous position.
