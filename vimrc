@@ -299,7 +299,7 @@ function! GrepTodos()
     exec "lvimgrep /\\vTODO|XXX|FIXME/ " . s:file
 endfunction
 
-nnoremap <F4> :silent !call GrepTodos()<cr>
+nnoremap <F4> :silent call GrepTodos()<cr>
 
 " remove whitespace at the end of a line
 " NOTE: uses the register A for storing the previous position.
