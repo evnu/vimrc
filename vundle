@@ -11,6 +11,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-pathogen'
 
+Plugin 'tpope/vim-dispatch'
+
 " {{{ Style
 
 "{{{ font
@@ -102,7 +104,7 @@ let g:tagbar_type_make = {
 Plugin 'embear/vim-localvimrc'
 let g:localvimrc_ask=0
 
-" Note-taking
+" {{{ Note-taking
 
 " prereq for vim-notes
 Plugin 'xolox/vim-misc'
@@ -110,6 +112,8 @@ Plugin 'xolox/vim-notes'
 
 " annotate lines with external files
 Plugin 'khorser/vim-qfnotes'
+
+" }}}
 
 " {{{ handling dates
 Plugin 'tpope/vim-speeddating.git'
@@ -121,6 +125,7 @@ Plugin 'jpalardy/vim-slime'
 
 " {{{ Erlang
 Plugin 'hcs42/vim-erlang-runtime'
+Plugin 'fishcakez/vim-dialyzer'
 " }}}
 
 " {{{ Working with Undos
