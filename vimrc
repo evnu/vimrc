@@ -198,12 +198,20 @@ augroup END
 "}}}
 
 "{{{ Erlang file settings
+let g:erlangWranglerPath = '~/work/tools/wrangler/lib/erlang/lib/wrangler-1.1.01'
 
 function! s:ErlangSettings()
     au FileType erlang setlocal comments=:%%%,:%%,:%
     " wrap text and code, add comment leader after newline and o
-    au FileType erlang setlocal formatoptions=tcqor
+    au FileType erlang setlocal formatoptions=tcqorj
     au FileType erlang setlocal textwidth=80
+
+    autocmd FileType erlang vnoremap <leader>e :WranglerExtractFunction<ENTER>
+    autocmd FileType erlang noremap  <leader>m :WranglerRenameModule<ENTER>
+    autocmd FileType erlang noremap  <leader>f :WranglerRenameFunction<ENTER>
+    autocmd FileType erlang noremap  <leader>v :WranglerRenameVariable<ENTER>
+    autocmd FileType erlang noremap  <leader>p :WranglerRenameProcess<ENTER>
+    autocmd FileType erlang noremap  <leader>u :WranglerUndo<ENTER>
 endfunction
 
 augroup filetype_erlang
