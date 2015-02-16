@@ -144,6 +144,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'AndrewRadev/linediff.vim'
 "}}}
 
+" {{{ Working with Documentation
+Plugin 'thinca/vim-ref'
+" }}}
+
 " {{{ Drawing
 Plugin 'vim-scripts/DrawIt'
 " }}}
