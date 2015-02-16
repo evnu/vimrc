@@ -20,7 +20,7 @@ Plugin 'drmikehenry/vim-fontsize'
 "}}}
 
 " {{{ Statusline
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 set laststatus=2 " to show airline when opening a file
 " }}}
 
