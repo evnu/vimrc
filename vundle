@@ -127,6 +127,7 @@ Plugin 'jpalardy/vim-slime'
 Plugin 'hcs42/vim-erlang-runtime'
 Plugin 'fishcakez/vim-dialyzer'
 Plugin 'ppikula/vim-wrangler'
+Plugin 'vim-erlang/vim-erlang-tags'
 " }}}
 
 " {{{ Working with Undos
