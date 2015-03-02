@@ -116,19 +116,15 @@ if has("gui_running")
     " guioptions: autoselect, grey menu items, vim icon, tear-off menu items
     set guioptions=agit
 
-    " set color of popup menu
-    highlight Pmenu guibg=black guifg=white gui=bold
-    set background=dark
-
     colorscheme molokai
 else
-    highlight Pmenu ctermbg=238 ctermfg=white gui=bold
-    " allow using the mouse in a terminal
-    set mouse=a
     " colors
     set background=dark
 
     colorscheme advantage
+    highlight Pmenu ctermbg=238 ctermfg=white gui=bold
+    " allow using the mouse in a terminal
+    set mouse=a
 endif
 "}}}
 
