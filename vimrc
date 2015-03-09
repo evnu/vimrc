@@ -192,7 +192,10 @@ augroup END
 "}}}
 
 "{{{ Erlang file settings
-let g:erlangWranglerPath = '~/work/tools/wrangler/lib/erlang/lib/wrangler-1.1.01'
+let s:wranglerp = '~/work/tools/wrangler/lib/erlang/lib/wrangler-1.1.01'
+if exists(s:wranglerp)
+    let g:erlangWranglerPath = s:wranglerp
+endif
 
 function! s:ErlangSettings()
     au FileType erlang setlocal comments=:%%%,:%%,:%
