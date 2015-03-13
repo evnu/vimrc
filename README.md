@@ -20,4 +20,5 @@ Installation
 
     git submodule init
     git submodule update
+
 * Then run `:PluginInstall`.
