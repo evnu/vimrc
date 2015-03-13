@@ -121,7 +121,7 @@ else
     " colors
     set background=dark
 
-    colorscheme advantage
+    colorscheme molokai
     highlight Pmenu ctermbg=238 ctermfg=white gui=bold
     " allow using the mouse in a terminal
     set mouse=a
