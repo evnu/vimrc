@@ -122,7 +122,7 @@ Plugin 'jpalardy/vim-slime'
 " }}}
 
 " {{{ Erlang
-Plugin 'hcs42/vim-erlang-runtime'
+Plugin 'vim-erlang/vim-erlang-runtime'
 Plugin 'fishcakez/vim-dialyzer'
 Plugin 'ppikula/vim-wrangler'
 Plugin 'vim-erlang/vim-erlang-tags'
@@ -134,7 +134,6 @@ Plugin 'mbbill/undotree'
 
 "{{{ Working with VCSs
 
-Plugin 'jlfwong/vim-mercenary'
 Plugin 'tpope/vim-fugitive'
 
 "}}}
