@@ -198,6 +198,7 @@ if exists(s:wranglerp)
 endif
 
 function! s:ErlangSettings()
+    let g:erlang_shift_trailing_match=1
     au FileType erlang setlocal comments=:%%%,:%%,:%
     " wrap text and code, add comment leader after newline and o
     au FileType erlang setlocal formatoptions=tcqorj
