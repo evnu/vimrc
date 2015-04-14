@@ -194,6 +194,10 @@ augroup END
 "{{{ Erlang file settings
 let g:erlangWranglerPath = '~/work/tools/wrangler/lib/erlang/lib/wrangler-1.1.01'
 
+function! s:ErlangHighlight()
+    syn keyword erlangTodo contained NOTE
+endfunction
+
 function! s:ErlangSettings()
     au FileType erlang setlocal comments=:%%%,:%%,:%
     " wrap text and code, add comment leader after newline and o
@@ -206,6 +210,8 @@ function! s:ErlangSettings()
     autocmd FileType erlang noremap  <leader>v :WranglerRenameVariable<ENTER>
     autocmd FileType erlang noremap  <leader>p :WranglerRenameProcess<ENTER>
     autocmd FileType erlang noremap  <leader>u :WranglerUndo<ENTER>
+
+    call <SID>ErlangHighlight()
 endfunction
 
 augroup filetype_erlang
