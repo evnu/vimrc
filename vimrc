@@ -192,13 +192,17 @@ augroup END
 "}}}
 
 "{{{ Erlang file settings
-let g:erlangWranglerPath = '~/work/tools/wrangler/lib/erlang/lib/wrangler-1.1.01'
+let s:wranglerp = '~/work/tools/wrangler/lib/erlang/lib/wrangler-1.1.01'
+if exists(s:wranglerp)
+    let g:erlangWranglerPath = s:wranglerp
+endif
 
 function! s:ErlangHighlight()
     syn keyword erlangTodo contained NOTE
 endfunction
 
 function! s:ErlangSettings()
+    let g:erlang_shift_trailing_match=1
     au FileType erlang setlocal comments=:%%%,:%%,:%
     " wrap text and code, add comment leader after newline and o
     au FileType erlang setlocal formatoptions=tcqorj
