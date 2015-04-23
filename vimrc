@@ -198,8 +198,8 @@ augroup END
 "}}}
 
 "{{{ Erlang file settings
-let s:wranglerp = '~/work/tools/wrangler/lib/erlang/lib/wrangler-1.1.01'
-if exists(s:wranglerp)
+let s:wranglerp = '~/.vim/wrangler/lib/erlang/lib/wrangler-1.1.01'
+if ! empty(finddir(s:wranglerp))
     let g:erlangWranglerPath = s:wranglerp
 endif
 
