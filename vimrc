@@ -110,6 +110,7 @@ set hlsearch
 " }}}
 
 "{{{Style
+
 " Colorscheme
 if has("gui_running")
     set guifont=Terminus\ 10
@@ -126,6 +127,11 @@ else
     " allow using the mouse in a terminal
     set mouse=a
 endif
+
+" colorize the cursor and ignore the color scheme for this
+" NOTE: in a terminal emulator (e.g. rxvt), the color must probably be defined in ~/.Xresources
+highlight Cursor guifg=white guibg=red
+
 "}}}
 
 "{{{Tabline
