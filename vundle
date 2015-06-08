@@ -27,6 +27,7 @@ set laststatus=2 " to show airline when opening a file
 "{{{ Colorschemes
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'gosukiwi/vim-atom-dark'
 "}}}
 
 " add markers in the quickfix column
@@ -107,9 +108,6 @@ let g:localvimrc_ask=0
 " prereq for vim-notes
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
-
-" annotate lines with external files
-Plugin 'khorser/vim-qfnotes'
 
 " }}}
 
