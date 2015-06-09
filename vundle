@@ -109,6 +109,13 @@ let g:localvimrc_ask=0
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 
+Plugin 'fmoralesc/vim-pad'
+let g:pad#dir = expand('~/.vim/notes')
+
+if !isdirectory(g:pad#dir)
+    call mkdir(g:pad#dir)
+endif
+
 " }}}
 
 " {{{ handling dates
