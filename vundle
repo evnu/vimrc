@@ -103,6 +103,10 @@ let g:tagbar_type_make = {
 Plugin 'embear/vim-localvimrc'
 let g:localvimrc_ask=0
 
+" {{{ Movement
+Plugin 'unblevable/quick-scope'
+" }}}
+
 " {{{ Note-taking
 
 " prereq for vim-notes
@@ -154,4 +158,11 @@ Plugin 'thinca/vim-ref'
 
 " {{{ Drawing
 Plugin 'vim-scripts/DrawIt'
+" }}}
+
+" {{{ Languages
+
+Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
+
 " }}}
