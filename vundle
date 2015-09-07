@@ -57,9 +57,6 @@ Plugin 'tpope/vim-surround'
 "}}}
 
 "{{{ Syntax
-" Syntax checks
-Plugin 'scrooloose/syntastic'
-
 " Markdown
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
