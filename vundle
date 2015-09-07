@@ -39,24 +39,6 @@ Plugin 'scrooloose/nerdtree'
 " }}}
 
 "{{{ Completion
-Plugin 'Shougo/neocomplete.vim'
-" Enable neocomplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-
-augroup neosnippet
-    au!
-    au FileType neosnippet :set tw=0 nowrap
-augroup END
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
 Plugin 'kien/ctrlp.vim'
 if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
