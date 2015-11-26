@@ -28,6 +28,7 @@ set laststatus=2 " to show airline when opening a file
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'fxn/vim-monochrome'
 "}}}
 
 " add markers in the quickfix column
@@ -59,6 +60,7 @@ Plugin 'tpope/vim-surround'
 "{{{ Syntax
 " Syntax checks
 Plugin 'scrooloose/syntastic'
+let g:syntastic_always_populate_loc_list = 1
 
 " Markdown
 Plugin 'plasticboy/vim-markdown'
