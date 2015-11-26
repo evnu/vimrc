@@ -279,6 +279,14 @@ augroup trac
     au BufNew,BufRead *trac.* :set tw=0
 augroup END
 " }}}
+
+" {{{ Git
+augroup git
+    au!
+    au FileType gitcommit set tw=72
+augroup END
+" }}}
+"
 "}}}
 
 " {{{ Keybindings
