@@ -68,6 +68,9 @@ let g:vim_markdown_folding_disabled=1
 
 " Filetype for trac
 Plugin 'tracwiki'
+
+" Vim's python indent is not good
+Plugin 'hynek/vim-python-pep8-indent'
 "}}}
 
 " {{{ Tags
@@ -115,6 +118,10 @@ Plugin 'vim-erlang/vim-erlang-runtime'
 Plugin 'fishcakez/vim-dialyzer'
 Plugin 'ppikula/vim-wrangler'
 Plugin 'vim-erlang/vim-erlang-tags'
+" }}}
+
+" {{{ Perl
+Plugin 'vim-perl/vim-perl'
 " }}}
 
 " {{{ Working with Undos
