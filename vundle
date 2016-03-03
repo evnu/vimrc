@@ -47,10 +47,6 @@ Plugin 'tpope/vim-surround'
 "}}}
 
 "{{{ Syntax
-" Syntax checks
-Plugin 'scrooloose/syntastic'
-let g:syntastic_always_populate_loc_list = 1
-
 " Markdown
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
