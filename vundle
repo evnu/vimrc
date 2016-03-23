@@ -83,10 +83,6 @@ Plugin 'xolox/vim-notes'
 
 " }}}
 
-" {{{ handling dates
-Plugin 'tpope/vim-speeddating.git'
-" }}}
-
 " {{{ REPL
 Plugin 'jpalardy/vim-slime'
 " }}}
