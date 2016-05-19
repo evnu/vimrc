@@ -117,6 +117,11 @@ Plugin 'AndrewRadev/linediff.vim'
 Plugin 'thinca/vim-ref'
 " }}}
 
+" {{{ Wrapping
+Plugin 'FooSoft/vim-argwrap'
+nnoremap <silent> <leader>a :ArgWrap<CR>
+" }}}
+
 " {{{ Drawing
 Plugin 'vim-scripts/DrawIt'
 " }}}
