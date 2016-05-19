@@ -126,6 +126,13 @@ else
     highlight Pmenu ctermbg=238 ctermfg=white gui=bold
     " allow using the mouse in a terminal
     set mouse=a
+
+    " tmux redraws pars of the background
+    " from: http://vi.stackexchange.com/a/247
+    if &term =~ '256color'
+        " disable Background Color Erase (BCE)
+        set t_ut=
+    endif
 endif
 
 " colorize the cursor and ignore the color scheme for this
