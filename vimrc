@@ -34,6 +34,9 @@ set undodir=~/.vim/undodir
 set nobackup
 set noswapfile
 
+" jump to opening paranthesis when entering paranthesis
+set showmatch
+
 "{{{ highlight whitespace
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
