@@ -130,6 +130,8 @@ Plugin 'vim-scripts/DrawIt'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
+" Note: install rust-racer from AUR
+Plugin 'racer-rust/vim-racer'
 
 " }}}
 
