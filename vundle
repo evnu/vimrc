@@ -26,13 +26,8 @@ set laststatus=2 " to show airline when opening a file
 
 "{{{ Colorschemes
 Plugin 'tomasr/molokai'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'fxn/vim-monochrome'
 "}}}
-
-" add markers in the quickfix column
-Plugin 'kshenoy/vim-signature'
 "}}}
 
 " {{{ Navigation
@@ -83,19 +78,10 @@ Plugin 'xolox/vim-notes'
 
 " }}}
 
-" {{{ REPL
-Plugin 'jpalardy/vim-slime'
-" }}}
-
 " {{{ Erlang
 Plugin 'vim-erlang/vim-erlang-runtime'
-Plugin 'fishcakez/vim-dialyzer'
 Plugin 'ppikula/vim-wrangler'
 Plugin 'vim-erlang/vim-erlang-tags'
-" }}}
-
-" {{{ Perl
-Plugin 'vim-perl/vim-perl'
 " }}}
 
 " {{{ Working with Undos
