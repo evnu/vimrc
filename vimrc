@@ -354,3 +354,9 @@ smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " }}}
+
+" {{{ neovim-specific
+
+" Display a pipe cursor when in insert mode.
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+" }}}
