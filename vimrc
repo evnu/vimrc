@@ -19,6 +19,9 @@ filetype on
 "{{{Main options
 syntax on "enable syntax highlighting
 
+" set terminal colors
+set t_Co=256
+
 " enable hybrid relativenumber-number
 set relativenumber
 set number
