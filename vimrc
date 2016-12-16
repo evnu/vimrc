@@ -356,7 +356,8 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
-nnoremap <leader>tp :execute "ptag " . expand("<cword>")<cr>
+nnoremap <leader>pt :execute "ptag " . expand("<cword>")<cr>
+nnoremap <leader>pc :pclose<cr>
 
 " }}}
 
