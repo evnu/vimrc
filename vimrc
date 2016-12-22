@@ -225,7 +225,7 @@ function! s:ErlangSettings()
     au FileType erlang setlocal comments=:%%%,:%%,:%
     " wrap text and code, add comment leader after newline and o
     au FileType erlang setlocal formatoptions=tcqorj
-    au FileType erlang setlocal textwidth=80
+    au FileType erlang setlocal textwidth=90
 
     autocmd FileType erlang vnoremap <leader>e :WranglerExtractFunction<ENTER>
     autocmd FileType erlang noremap  <leader>m :WranglerRenameModule<ENTER>
@@ -366,3 +366,4 @@ nnoremap <leader>pc :pclose<cr>
 " Display a pipe cursor when in insert mode.
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 " }}}
+
