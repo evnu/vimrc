@@ -8,6 +8,7 @@ Requirements
 
 * pathogen
 * vundle
+* [fzf](https://github.com/junegunn/fzf)
 
 Installation
 ============
