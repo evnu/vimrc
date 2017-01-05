@@ -104,6 +104,12 @@ Plugin 'AndrewRadev/linediff.vim'
 Plugin 'thinca/vim-ref'
 " }}}
 
+" {{{ Scratchpads
+
+Plugin 'metakirby5/codi.vim'
+
+" }}}
+
 " {{{ Wrapping
 Plugin 'FooSoft/vim-argwrap'
 nnoremap <silent> <leader>a :ArgWrap<CR>
