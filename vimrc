@@ -351,11 +351,6 @@ function! s:RemoveTrailingWhitespace()
 endfunction
 nnoremap <leader>dws :call <SID>RemoveTrailingWhitespace()<cr>
 
-" neosnippets; see https://github.com/Shougo/neosnippet.vim
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
 nnoremap <leader>pt :execute "ptag " . expand("<cword>")<cr>
 nnoremap <leader>pc :pclose<cr>
 
