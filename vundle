@@ -33,6 +33,8 @@ Plugin 'fxn/vim-monochrome'
 " {{{ Navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
+
+nnoremap <SPACE><SPACE> :FZF<CR>
 " }}}
 
 "{{{ Formatting
