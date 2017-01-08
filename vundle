@@ -30,6 +30,12 @@ Plugin 'fxn/vim-monochrome'
 "}}}
 "}}}
 
+" {{{ Lint
+Plugin 'w0rp/ale'
+nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>an <Plug>(ale_next_wrap)
+" }}}
+
 " {{{ Navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
