@@ -91,6 +91,7 @@ Plugin 'xolox/vim-notes'
 Plugin 'vim-erlang/vim-erlang-runtime'
 Plugin 'ppikula/vim-wrangler'
 Plugin 'vim-erlang/vim-erlang-tags'
+Plugin 'vim-erlang/vim-erlang-omnicomplete'
 " }}}
 
 " {{{ Working with Undos
