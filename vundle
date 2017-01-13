@@ -27,6 +27,8 @@ set laststatus=2 " to show airline when opening a file
 "{{{ Colorschemes
 Plugin 'tomasr/molokai'
 Plugin 'fxn/vim-monochrome'
+Plugin 'romainl/Apprentice'
+
 "}}}
 "}}}
 

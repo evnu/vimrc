@@ -123,12 +123,21 @@ if has("gui_running")
     " guioptions: autoselect, grey menu items, vim icon, tear-off menu items
     set guioptions=agit
 
-    colorscheme molokai
+    if &diff
+        colorscheme apprentice
+    else
+        colorscheme molokai
+    endif
 else
     " colors
     set background=dark
 
-    colorscheme molokai
+    if &diff
+        colorscheme apprentice
+    else
+        colorscheme molokai
+    endif
+
     highlight Pmenu ctermbg=238 ctermfg=white gui=bold
     " allow using the mouse in a terminal
     set mouse=a
