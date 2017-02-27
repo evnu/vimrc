@@ -119,7 +119,7 @@ set hlsearch
 
 " Colorscheme
 if has("gui_running")
-    set guifont=Terminus\ 10
+    set guifont=xos4\ Terminus\ 10
     " guioptions: autoselect, grey menu items, vim icon, tear-off menu items
     set guioptions=agit
 
