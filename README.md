@@ -6,6 +6,7 @@ My vim dotfiles. That's it.
 Requirements
 ============
 
+* gvim (this is important! otherwise, `PRIMARY` selection might not work.)
 * pathogen
 * vundle
 * [fzf](https://github.com/junegunn/fzf)
