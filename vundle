@@ -139,6 +139,8 @@ Plugin 'cespare/vim-toml'
 " Note: install rust-racer from AUR
 Plugin 'racer-rust/vim-racer'
 
+Plugin 'elixir-lang/vim-elixir'
+
 " }}}
 
 " {{{ Help and Documentation
