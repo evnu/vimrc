@@ -13,6 +13,12 @@ Plugin 'tpope/vim-pathogen'
 
 Plugin 'tpope/vim-dispatch'
 
+" {{{ Unicode
+
+Plugin 'chrisbra/unicode.vim'
+
+" }}}
+
 " {{{ Style
 
 "{{{ font
