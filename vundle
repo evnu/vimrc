@@ -68,6 +68,8 @@ Plugin 'tpope/vim-surround'
 " Markdown
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
+" Disable concealing for markdown
+let g:vim_markdown_conceal = 0
 
 " Filetype for trac
 Plugin 'tracwiki'
