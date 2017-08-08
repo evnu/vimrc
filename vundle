@@ -119,6 +119,7 @@ Plugin 'mbbill/undotree'
 "{{{ Working with VCSs
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'evnu/vim-mercenary'
 
 "}}}
