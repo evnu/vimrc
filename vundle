@@ -53,8 +53,9 @@ nmap <silent> <Leader>an <Plug>(ale_next_wrap)
 " {{{ Navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
-nnoremap <SPACE><SPACE> :FZF<CR>
+nnoremap <SPACE><SPACE> :GFiles<CR>
 " }}}
 
 "{{{ Formatting
