@@ -158,8 +158,6 @@ Plugin 'cespare/vim-toml'
 Plugin 'racer-rust/vim-racer'
 
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'slashmili/alchemist.vim'
-
 " }}}
 
 " {{{ Help and Documentation
