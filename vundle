@@ -126,6 +126,7 @@ Plugin 'mbbill/undotree'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'shumphrey/fugitive-gitlab.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'evnu/vim-mercenary'
 
 "}}}
