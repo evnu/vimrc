@@ -55,7 +55,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
-nnoremap <SPACE><SPACE> :GFiles<CR>
+nnoremap <SPACE>p :GFiles<CR>
+nnoremap <SPACE>f :Files<CR>
+nnoremap <SPACE>b :Buffers<CR>
+nnoremap <SPACE>t :Tags<CR>
 
 Plugin 'gabesoft/vim-ags'
 " }}}
