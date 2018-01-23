@@ -338,9 +338,6 @@ nmap <F8> :TagbarToggle<CR>
 " for vim undo tree
 nnoremap <F6> :UndotreeToggle<CR>
 
-" toggle syntastic
-nnoremap <F9> :SyntasticToggleMode<CR>
-
 " Grep for todos and open search results using :lopen
 function! GrepTodos()
     let s:file = expand('%:p')
@@ -362,6 +359,12 @@ nnoremap <leader>dws :call <SID>RemoveTrailingWhitespace()<cr>
 
 nnoremap <leader>pt :execute "ptag " . expand("<cword>")<cr>
 nnoremap <leader>pc :pclose<cr>
+
+" Mappings for racer (taken from https://github.com/racer-rust/vim-racer)
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " }}}
 
