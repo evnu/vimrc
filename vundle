@@ -97,6 +97,25 @@ let g:tagbar_type_make = {
                 \ 't:targets'
             \ ]
             \}
+
+" Add Elixir as indicated in https://github.com/majutsushi/tagbar/wiki
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records',
+        \ 't:tests'
+    \ ]
+\ }
 " }}}
 
 " Project-specific settings
