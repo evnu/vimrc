@@ -116,6 +116,8 @@ let g:tagbar_type_elixir = {
         \ 't:tests'
     \ ]
 \ }
+
+Plugin 'mhinz/vim-mix-format'
 " }}}
 
 " Project-specific settings
