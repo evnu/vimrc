@@ -192,3 +192,9 @@ Plugin 'slashmili/alchemist.vim'
 " View info pages
 Plugin 'alx741/vinfo'
 " }}}
+
+" {{{ Testing
+Plugin 'janko-m/vim-test'
+nmap <silent> <leader>t :TestNearest<CR>
+let test#strategy = "dispatch"
+" }}}
