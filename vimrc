@@ -308,7 +308,14 @@ augroup git
     au FileType gitcommit set tw=72
 augroup END
 " }}}
-"
+
+" {{{ YAML
+augroup yaml
+    au!
+    au FileType yaml setlocal sw=2
+augroup END
+" }}}
+
 "}}}
 
 " {{{ Keybindings
