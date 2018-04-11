@@ -188,6 +188,8 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 
+Plugin 'saltstack/salt-vim'
+
 " }}}
 
 " {{{ Help and Documentation
