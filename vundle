@@ -48,6 +48,11 @@ Plugin 'w0rp/ale'
 let g:ale_sign_column_always = 1
 nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>an <Plug>(ale_next_wrap)
+
+" disable linting elixir: eats up way too much CPU
+let g:ale_linters = {
+            \ 'elixir': [],
+            \}
 " }}}
 
 " {{{ Navigation
