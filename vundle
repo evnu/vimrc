@@ -51,7 +51,7 @@ nmap <silent> <Leader>an <Plug>(ale_next_wrap)
 
 " disable linting elixir: eats up way too much CPU
 let g:ale_linters = {
-            \ 'elixir': [],
+            \ 'elixir': ['mix'],
             \}
 " }}}
 
