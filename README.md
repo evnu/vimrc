@@ -19,3 +19,8 @@ Installation
         git submodule init
         git submodule update
 * Then run `:PluginInstall`.
+
+Nvim
+====
+
+To try this with neovim, link the repository to `~/.config/nvim`.
