@@ -32,8 +32,6 @@ set laststatus=2 " to show airline when opening a file
 "{{{ Colorschemes
 Plugin 'tomasr/molokai'
 Plugin 'fxn/vim-monochrome'
-Plugin 'romainl/Apprentice'
-
 "}}}
 
 "{{{ Indented Lines
@@ -46,8 +44,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'w0rp/ale'
 " Keep gutter open
 let g:ale_sign_column_always = 1
-nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
-nmap <silent> <Leader>an <Plug>(ale_next_wrap)
 
 " disable linting elixir: eats up way too much CPU
 let g:ale_linters = {
@@ -69,10 +65,7 @@ Plugin 'gabesoft/vim-ags'
 " }}}
 
 "{{{ Formatting
-" Tabularize stuff
 Plugin 'godlygeek/tabular'
-
-Plugin 'tpope/vim-surround'
 "}}}
 
 "{{{ Syntax
@@ -86,9 +79,6 @@ let g:vim_markdown_emphasis_multiline = 0
 
 " Filetype for trac
 Plugin 'tracwiki'
-
-" Vim's python indent is not good
-Plugin 'hynek/vim-python-pep8-indent'
 "}}}
 
 " {{{ Tags
@@ -121,25 +111,14 @@ let g:tagbar_type_elixir = {
         \ 't:tests'
     \ ]
 \ }
-
-Plugin 'mhinz/vim-mix-format'
 " }}}
 
 " Project-specific settings
 Plugin 'embear/vim-localvimrc'
 let g:localvimrc_ask=0
 
-" {{{ Note-taking
-
-" prereq for vim-notes
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
-
-" }}}
-
 " {{{ Erlang
 Plugin 'vim-erlang/vim-erlang-runtime'
-Plugin 'ppikula/vim-wrangler'
 Plugin 'vim-erlang/vim-erlang-tags'
 Plugin 'vim-erlang/vim-erlang-omnicomplete'
 " }}}
@@ -151,10 +130,7 @@ Plugin 'mbbill/undotree'
 "{{{ Working with VCSs
 
 Plugin 'tpope/vim-fugitive'
-Plugin 'shumphrey/fugitive-gitlab.vim'
-Plugin 'tpope/vim-rhubarb'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'evnu/vim-mercenary'
 
 "}}}
 
@@ -191,19 +167,8 @@ Plugin 'cespare/vim-toml'
 Plugin 'racer-rust/vim-racer'
 
 Plugin 'elixir-lang/vim-elixir'
-" Plugin 'slashmili/alchemist.vim'
+Plugin 'mhinz/vim-mix-format'
 
 Plugin 'saltstack/salt-vim'
 
-" }}}
-
-" {{{ Help and Documentation
-" View info pages
-Plugin 'alx741/vinfo'
-" }}}
-
-" {{{ Testing
-Plugin 'janko-m/vim-test'
-nmap <silent> <leader>t :TestNearest<CR>
-let test#strategy = "dispatch"
 " }}}
