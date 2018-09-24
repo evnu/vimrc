@@ -122,21 +122,11 @@ if has("gui_running")
     set guifont=xos4\ Terminus\ 10
     " guioptions: autoselect, grey menu items, vim icon, tear-off menu items
     set guioptions=agit
-
-    if &diff
-        colorscheme apprentice
-    else
-        colorscheme molokai
-    endif
+    colorscheme molokai
 else
     " colors
     set background=dark
-
-    if &diff
-        colorscheme apprentice
-    else
-        colorscheme molokai
-    endif
+    colorscheme molokai
 
     highlight Pmenu ctermbg=238 ctermfg=white gui=bold
     " allow using the mouse in a terminal
