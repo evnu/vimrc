@@ -160,7 +160,6 @@ Plugin 'vim-scripts/DrawIt'
 " {{{ Languages
 
 Plugin 'rust-lang/rust.vim'
-let g:rustfmt_autosave = 1
 
 Plugin 'cespare/vim-toml'
 " Note: install rust-racer from AUR
