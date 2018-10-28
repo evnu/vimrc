@@ -48,7 +48,11 @@ let g:ale_sign_column_always = 1
 " disable linting elixir: eats up way too much CPU
 let g:ale_linters = {
             \ 'elixir': ['mix'],
+            \ 'rust': ['rls', 'cargo', 'rustc']
             \}
+
+let g:ale_fixers = {'rust': ['rustfmt']}
+let g:ale_completion_enabled = 1
 " }}}
 
 " {{{ Navigation
