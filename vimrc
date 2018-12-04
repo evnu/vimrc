@@ -354,9 +354,6 @@ function! s:RemoveTrailingWhitespace()
 endfunction
 nnoremap <leader>dws :call <SID>RemoveTrailingWhitespace()<cr>
 
-nnoremap <leader>pt :execute "ptag " . expand("<cword>")<cr>
-nnoremap <leader>pc :pclose<cr>
-
 " Mappings for racer (taken from https://github.com/racer-rust/vim-racer)
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
