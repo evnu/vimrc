@@ -338,7 +338,7 @@ nnoremap <F6> :UndotreeToggle<CR>
 " Grep for todos and open search results using :lopen
 function! GrepTodos()
     let s:file = expand('%:p')
-    exec "lvimgrep /\\vTODO|XXX|FIXME/ " . s:file
+    exec "Ags --context=0 TODO|XXX|FIXME " . s:file
 endfunction
 
 nnoremap <F4> :silent call GrepTodos()<cr>
