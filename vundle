@@ -181,3 +181,12 @@ Plugin 'mhinz/vim-mix-format'
 Plugin 'saltstack/salt-vim'
 
 " }}}
+
+" {{{ Snippet Handling
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
+
+" }}}
