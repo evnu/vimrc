@@ -190,3 +190,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
 
 " }}}
+
+" {{{ Writing
+Plugin 'junegunn/goyo.vim'
+" }}}
