@@ -194,3 +194,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
 " {{{ Writing
 Plugin 'junegunn/goyo.vim'
 " }}}
+
+" {{{ Highlighting
+Plugin 'markonm/traces.vim'
+" }}}
