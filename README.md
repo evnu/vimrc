@@ -11,6 +11,7 @@ Requirements
 * vundle
 * [fzf](https://github.com/junegunn/fzf)
 * `python-neovim` (if neovim is to be used on ArchLinux)
+* taskwarrior and tasklib
 
 Installation
 ============

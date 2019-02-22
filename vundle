@@ -199,3 +199,8 @@ Plugin 'junegunn/goyo.vim'
 " {{{ Highlighting
 Plugin 'markonm/traces.vim'
 " }}}
+
+" {{{ Tasks/Wiki
+Plugin 'vimwiki/vimwiki'
+Plugin 'tbabej/taskwiki.git'
+" }}}
