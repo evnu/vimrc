@@ -68,6 +68,8 @@ nnoremap <SPACE>t :Tags<CR>
 Plugin 'gabesoft/vim-ags'
 
 let g:ags_results_per_tab = 1
+
+Plugin 'jremmen/vim-ripgrep'
 " }}}
 
 "{{{ Formatting
