@@ -56,7 +56,9 @@ let g:ale_completion_enabled = 1
 " }}}
 
 " {{{ Navigation
-Plugin 'scrooloose/nerdtree'
+Plugin 'justinmk/vim-dirvish'
+nnoremap <F3> :Dirvish %<CR>
+
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
@@ -97,6 +99,7 @@ Plugin 'chrisbra/csv.vim'
 " Tagbar, setup for <F8>
 Plugin 'majutsushi/tagbar'
 nnoremap <F8> :TagbarToggle<CR>
+
 " Add make as indicated in https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_type_make = {
             \ 'kinds':[
@@ -137,6 +140,7 @@ Plugin 'vim-erlang/vim-erlang-omnicomplete'
 
 " {{{ Working with Undos
 Plugin 'mbbill/undotree'
+nnoremap <F6> :UndotreeToggle<CR>
 " }}}
 
 "{{{ Working with VCSs

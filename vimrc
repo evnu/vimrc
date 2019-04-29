@@ -328,13 +328,6 @@ nnoremap <leader>sf :source %<cr>
 " See :help c_CTRL-R for the expression register '='
 nnoremap <leader>se :split <c-r>=g:neosnippet#snippets_directory."/".&ft.".snip"<cr><cr>
 
-" Some simple keymappings
-map <F3> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
-
-" for vim undo tree
-nnoremap <F6> :UndotreeToggle<CR>
-
 " Grep for todos and open search results using :lopen
 function! GrepTodos()
     let s:file = expand('%:p')
