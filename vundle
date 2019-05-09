@@ -188,8 +188,6 @@ Plugin 'rust-lang/rust.vim'
 let g:rustfmt_autosave = 1
 
 Plugin 'cespare/vim-toml'
-" Note: install rust-racer from AUR
-Plugin 'racer-rust/vim-racer'
 
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mhinz/vim-mix-format'
