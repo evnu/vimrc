@@ -52,7 +52,7 @@ let g:ale_linters = {
             \}
 
 let g:ale_fixers = {'rust': ['rustfmt']}
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 " }}}
 
 " {{{ Navigation
